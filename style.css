@@ -1,0 +1,237 @@
+:root {
+  --very-darkmagenta: hsl(300, 43%, 22%);
+  --soft-pink: hsl(333, 80%, 67%);
+  --dark-grayinsh-magenta: hsl(303, 10%, 53%);
+  --light-grayish-magenta: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
+
+  --font-family: "Spartan", sans-serif;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("bg-pattern-top-desktop.svg"),
+    url("bg-pattern-bottom-desktop.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: left top, right top;
+  background-color: whitesmoke;
+  transform: scale(0.9);
+}
+
+.container {
+  /* outline: 2px solid red; */
+  /* margin: 2rem; */
+  /* padding: 2rem; */
+  position: absolute;
+  top: 10%;
+  max-width: 1440px;
+}
+
+.content {
+  /* outline:2px solid blue; */
+  padding: 5rem;
+  display: flex;
+  margin: 1rem;
+}
+
+.content-heading {
+  width: 50%;
+  /* outline:2px solid red; */
+  margin-right: 2rem;
+  margin-top: 4rem;
+}
+
+.content-heading h1 {
+  font-size: 2.8rem;
+  font-family: var(--font-family);
+  font-weight: 700;
+  width: 70%;
+  color: var(--very-darkmagenta);
+}
+
+.content-heading .heading-paragraph {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 0.94rem;
+  margin-top: 0.5rem;
+  line-height: 1.3rem;
+  width: 70%;
+  color: var(--very-darkmagenta);
+}
+
+.content-rating {
+  /* outline: 2px solid rgb(68, 68, 60); */
+  /* padding: 2rem; */
+  margin-top: 4rem;
+}
+
+.reviews,
+.report-guru,
+.best-tech {
+  /* border: 2px solid green; */
+  background-color: var(--light-grayish-magenta);
+
+  padding: 1.4rem;
+  font-family: var(--font-family);
+  font-weight: 700;
+  border-radius: 0.4rem;
+  margin: 1rem;
+}
+.comments {
+  font-size: 1rem;
+  margin: 1.3rem;
+  padding-right: 4rem;
+}
+
+.report-guru {
+  transform: translateX(2rem);
+}
+
+.best-tech {
+  transform: translateX(4rem);
+}
+
+/* second section of the page */
+.buyer-content {
+  display: flex;
+  /* outline: dotted 3px rgb(54, 35, 54); */
+  margin: 0 3.7rem;
+  margin-top: -4rem;
+}
+
+.profile img {
+  border-radius: 10rem;
+  width: 6rem;
+  padding: 1.2rem;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+.profile .text {
+  margin-left: 1rem;
+}
+
+.irene,
+.anne,
+.colton {
+  /* outline: 2px solid darkturquoise; */
+  /* padding: 1rem; */
+
+  background-color: var(--very-darkmagenta);
+  color: var(--white);
+  font-family: var(--font-family);
+  margin: 0 1rem;
+  border-radius: 0.8rem;
+}
+
+.profile h4 {
+  color: var(--soft-pink);
+  font-family: var(--font-family);
+  margin-top: 0.5rem;
+}
+
+.irene p,
+.anne p,
+.colton p {
+  padding: 1.2rem;
+  font-family: var(--font-family);
+  line-height: 1.6rem;
+}
+
+.irene {
+  transform: translate(1rem, 1rem);
+}
+
+.anne {
+  transform: translate(2rem, 2rem);
+}
+
+/*  media queries for mobile */
+
+@media screen and (max-width: 1374px) {
+  body {
+    min-width: 1370px;
+  }
+  .container {
+    width: 30%;
+    /* outline: 2px solid blue; */
+    position: relative;
+    left: 36%;
+  }
+
+  /* content heading */
+  .content {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .content-heading {
+    text-align: center;
+    /* background-color: white; */
+    width: 100%;
+  }
+
+  .content-heading h1 {
+    width: 100%;
+    text-align: center;
+    transform: scale(0.8);
+  }
+
+  .content-heading .heading-paragraph {
+    /* background-color: red; */
+    width: 100%;
+    font-size: 1.2rem;
+    /* white-space:wrap; */
+    line-height: 1.5rem;
+  }
+
+  /* CONTENT RATING */
+  .content-rating {
+    flex-direction: column;
+    /* background-color: green; */
+  }
+  .report-guru,
+  .best-tech,
+  .reviews {
+    transform: translate(0);
+    padding: 0.4rem;
+  }
+  .star {
+    position: relative;
+    left: 6.5rem;
+    margin-top: 5rem;
+  }
+  .star .icon {
+    padding: 0 0.2rem;
+    margin: 0.5rem 0;
+  }
+  .comments {
+    display: block;
+    white-space: nowrap;
+    text-align: center;
+    margin: 0.5rem;
+    padding: 0;
+  }
+  /* BUYER CONTENT */
+  .buyer-content {
+    flex-direction: column;
+    /* background-color: brown; */
+    width: 100%;
+    margin: 0;
+    margin-top: 3rem;
+  }
+  .colton,
+  .irene,
+  .anne {
+    transform: translate(0);
+    margin-bottom: 1rem;
+  }
+}
